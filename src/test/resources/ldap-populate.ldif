@@ -1,0 +1,66 @@
+dn: dc=dauphine,dc=fr
+dc: dauphine
+objectClass: organization
+objectClass: dcObject
+o: Université Paris Dauphine
+
+dn: ou=people,dc=dauphine,dc=fr
+objectClass: organizationalUnit
+objectClass: top
+ou: people
+
+dn: uid=00000001,ou=people,dc=dauphine,dc=fr
+objectClass: top
+objectClass: person
+objectClass: inetOrgPerson
+givenName: check
+sn: account
+description: compte prestataire de verification de compte
+displayName: Check Account
+cn: Account Check
+uid: 00000001
+userPassword: {SASL}check.account@DAUPHINE.FR
+
+dn: uid=00000002,ou=people,dc=dauphine,dc=fr
+objectClass: top
+objectClass: person
+objectClass: inetOrgPerson
+givenName: test
+sn: account
+description: compte prestataire de verification de compte
+displayName: Test Account
+cn: Account Test
+uid: 00000002
+userPassword: {SASL}test.account@DAUPHINE.FR
+
+dn: uid=00000003,ou=people,dc=dauphine,dc=fr
+objectClass: top
+objectClass: person
+objectClass: inetOrgPerson
+givenName: manager
+sn: account
+description: compte manager de compte
+displayName: Manager Account
+cn: Manager Check
+uid: 00000003
+userPassword: {SASL}manager.account@DAUPHINE.FR
+
+dn: ou=groups,dc=dauphine,dc=fr
+objectClass: organizationalUnit
+objectClass: top
+ou: groups
+
+dn: cn=compte-tests,ou=groups,dc=dauphine,dc=fr
+objectClass: top
+objectClass: groupOfNames
+cn: compte-tests
+owner: uid=00000003,ou=people,dc=dauphine,dc=fr
+member: uid=00000001,ou=people,dc=dauphine,dc=fr
+member: uid=00000002,ou=people,dc=dauphine,dc=fr
+description: groupes des comptes de test
+
+
+dn: ou=structures,dc=dauphine,dc=fr
+objectClass: organizationalUnit
+objectClass: top
+ou: structures

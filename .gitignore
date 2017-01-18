@@ -1,0 +1,10 @@
+/bin/
+/build/
+/lib/
+/target/
+/.settings/
+/.classpath
+/.idea
+/*.iml
+/.project
+*private.*
